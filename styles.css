@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  background-color: grey;
+}
+
+html {
+  font-size: 13px;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(210deg, 46%, 95%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 50vw;
+  height: 50vh;
+  min-height: 325px;
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px 0 0 10px;
+}
+
+.info-container {
+  background-color: white;
+  border-radius: 0 10px 10px 0;
+}
+
+.inner-container {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.subtitle {
+  color: hsl(212deg, 23%, 69%);
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.bottom-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 12rem;
+}
+.profile img {
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.profile-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.profile-name p:nth-child(1) {
+  font-weight: 700;
+}
+.profile-name p:nth-child(2) {
+  color: hsl(214deg, 17%, 51%);
+  font-weight: 500;
+}
+
+.share-icon button,
+.hidden-share-icon button {
+  border-radius: 50%;
+  padding: 1rem;
+  border: none;
+  background-color: hsl(210deg, 46%, 95%);
+}
+.share-icon button:hover,
+.hidden-share-icon button:hover {
+  cursor: pointer;
+}
+.share-icon img,
+.hidden-share-icon img {
+  background-color: hsl(210deg, 46%, 95%);
+  border: none;
+  outline: none;
+}
+
+.hidden-share-icon {
+  display: none;
+}
+
+.share-modal {
+  position: absolute;
+  top: 14rem;
+  left: 23.3rem;
+  height: 3.5rem;
+  width: 16rem;
+  background-color: hsl(217deg, 19%, 35%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 0.7rem;
+  color: hsl(212deg, 23%, 69%);
+  letter-spacing: 3px;
+}
+.share-modal::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  width: 0;
+  height: 0;
+  border-top: solid 15px hsl(217deg, 19%, 35%);
+  border-left: solid 15px transparent;
+  border-right: solid 15px transparent;
+}
+
+.hide {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+@media (max-width: 1116px) {
+  .container {
+    width: 60vw;
+  }
+  .share-modal {
+    left: 23rem;
+  }
+}
+@media (max-width: 1087px) {
+  .container {
+    width: 65vw;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    width: 70vw;
+  }
+}
+@media (max-width: 930px) {
+  .container {
+    width: 75vw;
+  }
+}
+@media (max-width: 860px) {
+  .container {
+    width: 80vw;
+  }
+}
+@media (max-width: 815px) {
+  .container {
+    width: 85vw;
+  }
+}
+@media (max-width: 760px) {
+  .container {
+    width: 90vw;
+  }
+}
+@media (max-width: 715px) {
+  .container {
+    width: 95vw;
+  }
+}
+@media (max-width: 700px) {
+  body {
+    align-items: unset;
+  }
+  .container {
+    grid-template-columns: none;
+    grid-template-rows: 220px 312px;
+    width: 65vw;
+    height: auto;
+    margin-top: 4rem;
+  }
+  .image-container {
+    height: inherit;
+  }
+  .image-container img {
+    border-radius: 10px 10px 0 0;
+  }
+  .info-container {
+    border-radius: 0 0 10px 10px;
+  }
+  .hidden-share-icon {
+    display: unset;
+  }
+  .share-modal {
+    top: unset;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-radius: 0 0 10px 10px;
+    height: 5rem;
+    width: 100%;
+  }
+  .share-modal::after {
+    display: none;
+  }
+}
+@media (max-width: 615px) {
+  .container {
+    width: 75vw;
+  }
+}
+@media (max-width: 530px) {
+  .container {
+    width: 85vw;
+  }
+}
+@media (max-width: 470px) {
+  .container {
+    width: 100vw;
+  }
+}/*# sourceMappingURL=styles.css.map */
